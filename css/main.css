@@ -1,0 +1,15 @@
+.main-content {
+    height: 1645px;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+.fix-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 275px;
+    width: 100%;
+}

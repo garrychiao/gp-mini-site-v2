@@ -1,28 +1,146 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/animated.css">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hello, world!</title>
-  </head>
-  <body class="animated fadeIn">
-    <div class="main-content">          
-        <h1>Hello, world!</h1>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/animated.css">
+
+  <title>Hello, world!</title>
+</head>
+
+<body class="animated fadeIn">
+  <div class="main-content">
+    <ul class="nav nav-tabs d-none" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="petition-tab" data-toggle="tab" href="#petition" role="tab" aria-controls="petition" aria-selected="true">Petition</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="donate-tab" data-toggle="tab" href="#donate" role="tab" aria-controls="donate" aria-selected="false">donate</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="volunteer-tab" data-toggle="tab" href="#volunteer" role="tab" aria-controls="volunteer" aria-selected="false">volunteer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="share-tab" data-toggle="tab" href="#share" role="tab" aria-controls="share" aria-selected="false">share</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="petition" role="tabpanel" aria-labelledby="petition-tab">
+        <div class="main-content-img">
+          <img src="./img/petition.jpg" alt="">
+        </div>
+        <div class="nav-content-img">
+          <div onclick="openFirst()">
+            <img src="./img/btn1-h.jpg" alt="">
+          </div>
+          <div onclick="openSecond()">
+            <img src="./img/btn2.jpg" alt="">
+          </div>
+          <div onclick="openThird()">
+            <img src="./img/btn3.jpg" alt="">
+          </div>
+          <div  onclick="openFourth()">
+            <img src="./img/btn4.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="donate" role="tabpanel" aria-labelledby="donate-tab">
+        <div class="main-content-img">
+          <img src="./img/donate.jpg" alt="">
+        </div>
+        <div class="nav-content-img">
+          <div onclick="openFirst()">
+            <img src="./img/btn1.jpg" alt="">
+          </div>
+          <div onclick="openSecond()">
+            <img src="./img/btn2-h.jpg" alt="">
+          </div>
+          <div onclick="openThird()">
+            <img src="./img/btn3.jpg" alt="">
+          </div>
+          <div  onclick="openFourth()">
+            <img src="./img/btn4.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="volunteer" role="tabpanel" aria-labelledby="volunteer-tab">
+        <div class="main-content-img">
+          <img src="./img/volunteer.jpg" alt="">
+        </div>
+        <div class="nav-content-img">
+          <div onclick="openFirst()">
+            <img src="./img/btn1.jpg" alt="">
+          </div>
+          <div onclick="openSecond()">
+            <img src="./img/btn2.jpg" alt="">
+          </div>
+          <div onclick="openThird()">
+            <img src="./img/btn3-h.jpg" alt="">
+          </div>
+          <div  onclick="openFourth()">
+            <img src="./img/btn4.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="share" role="tabpanel" aria-labelledby="share-tab">
+        <div class="main-content-img">
+          <img src="./img/share.jpg" alt="">
+        </div>
+        <div class="nav-content-img">
+          <div onclick="openFirst()">
+            <img src="./img/btn1.jpg" alt="">
+          </div>
+          <div onclick="openSecond()">
+            <img src="./img/btn2.jpg" alt="">
+          </div>
+          <div onclick="openThird()">
+            <img src="./img/btn3.jpg" alt="">
+          </div>
+          <div  onclick="openFourth()">
+            <img src="./img/btn4-h.jpg" alt="">
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="fix-bottom">
-        <img src="./img/main-btn.png" class="img-responsive" alt="">
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+  </div>
+
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script>
+    function openFirst () {
+      $('#myTab a[href="#petition"]').tab('show');
+    }
+
+    function openSecond () {
+      $('#myTab a[href="#donate"]').tab('show');
+    }
+
+    function openThird () {
+      $('#myTab a[href="#volunteer"]').tab('show');
+    }
+
+    function openFourth () {
+      $('#myTab a[href="#share"]').tab('show');
+    }
+    
+  </script>
+</body>
+
 </html>

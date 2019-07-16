@@ -1,5 +1,6 @@
 body {
-    width: 1080px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .main-content {

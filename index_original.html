@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/animated.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body class="animated fadeIn">
+    <div class="main-content">          
+      <video controls autoplay loop width="100%">
+        <source src="./img/screen.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="fix-bottom">
+      <div class="nav-content-img">
+        <div onclick="openFirst()">
+          <img src="./img/white_01.jpg" alt="">
+        </div>
+        <div onclick="openSecond()">
+          <img src="./img/green_02.jpg" alt="">
+        </div>
+        <div onclick="openThird()">
+          <img src="./img/green_03.jpg" alt="">
+        </div>
+        <div  onclick="openFourth()">
+          <img src="./img/green_04.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      function openFirst () {
+        $('#myTab a[href="#petition"]').tab('show');
+      }
+
+      function openSecond () {
+        $('#myTab a[href="#donate"]').tab('show');
+      }
+
+      function openThird () {
+        $('#myTab a[href="#volunteer"]').tab('show');
+      }
+
+      function openFourth () {
+        $('#myTab a[href="#share"]').tab('show');
+      }
+      document.addEventListener('contextmenu', event => event.preventDefault());
+      var idleTime = 0;
+      $(document).ready(function () {
+          document.addEventListener('contextmenu', event => event.preventDefault());
+          //Increment the idle time counter every minute.
+          var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+          //Zero the idle timer on mouse movement.
+          $(this).mousemove(function (e) {
+              idleTime = 0;
+          });
+          $(this).keypress(function (e) {
+              idleTime = 0;
+          });
+      });
+      
+      function timerIncrement() {
+          idleTime = idleTime + 1;
+          // console.log(idleTime)
+          if (idleTime > 1) { // 3 minutes
+              window.location.href="./index.html"
+          }
+      }
+    </script>
+  </body>
+</html>

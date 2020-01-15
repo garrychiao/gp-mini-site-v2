@@ -25,11 +25,13 @@ body {
 
 .main-content-img > img {
     width: 100%;
+    height: 1650px;
 }
 
 
 .nav-content-img {
     display: inline-flex;
+    position: relative;
 }
 
 .nav-content-img > div {
